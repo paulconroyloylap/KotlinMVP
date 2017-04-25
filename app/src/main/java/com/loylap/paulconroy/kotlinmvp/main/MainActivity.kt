@@ -21,6 +21,9 @@ class MainActivity : BaseActivity<MainPresenter>(), MainView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /**
+         * invoking a logic method
+         */
         getPresenter().invokePresenterLogic()
     }
 
