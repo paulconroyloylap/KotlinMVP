@@ -1,4 +1,4 @@
-package com.loylap.paulconroy.kotlinmvp.mvp
+package com.loylap.paulconroy.kotlinmvp.main
 
 /**
  * The presenter is used to invoke logic methods from the activity
