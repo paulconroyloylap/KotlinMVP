@@ -6,20 +6,22 @@ import android.widget.Toast
 import com.loylap.paulconroy.kotlinmvp.R
 import com.loylap.paulconroy.kotlinmvp.base.BaseActivity
 
+
 class MainActivity : BaseActivity<MainPresenter>(), MainView {
 
-    var presenter: MainPresenter? = getPresenter()
+    var presenter: MainPresenter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        returnPresenter().showToast()
+        getPresenter().invokePresenterLogic()
     }
 
-    fun returnPresenter(): MainPresenterImp {
+
+     override fun getPresenter(): MainPresenterImp {
         if (presenter == null) {
-            presenter = MainPresenterImp(this)
+            presenter = MainPresenterImp(this, this)
         }
         return presenter as MainPresenterImp
     }
