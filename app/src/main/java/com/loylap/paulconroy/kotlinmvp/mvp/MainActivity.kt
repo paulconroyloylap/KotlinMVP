@@ -19,7 +19,7 @@ class MainActivity : BaseActivity<MainPresenter>(), MainView {
 
     fun returnPresenter(): MainPresenterImp {
         if (presenter == null) {
-            presenter = MainPresenterImp(this, this)
+            presenter = MainPresenterImp(this)
         }
         return presenter as MainPresenterImp
     }
