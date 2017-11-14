@@ -5,7 +5,7 @@ import com.loylap.paulconroy.kotlinmvp.R
 
 /**
  * The presenter implementation implements logic methods. No UI methods are to be placed here,
- * only logic, api calls etc.
+ * only logic, business, api calls etc.
  *
  * Created by paul conroy on 25/04/2017.
  */

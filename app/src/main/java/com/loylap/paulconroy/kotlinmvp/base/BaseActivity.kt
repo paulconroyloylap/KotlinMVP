@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 
 
 /**
- * Base activity to which all activities will extend on.
+ * Base activity to which all activities will extend on. Not needed in this example.
  *
  * Created by paul conroy on 25/04/2017.
  */

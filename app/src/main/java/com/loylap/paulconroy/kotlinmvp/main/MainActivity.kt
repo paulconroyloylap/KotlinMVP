@@ -2,9 +2,9 @@ package com.loylap.paulconroy.kotlinmvp.main
 
 
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.loylap.paulconroy.kotlinmvp.R
-import com.loylap.paulconroy.kotlinmvp.base.BaseActivity
 
 /**
  * Example activity, in this case, the Main activity holding the UI
@@ -13,7 +13,7 @@ import com.loylap.paulconroy.kotlinmvp.base.BaseActivity
  *
  * Created by paul conroy on 25/04/2017.
  */
-class MainActivity : BaseActivity<MainPresenter>(), MainView {
+class MainActivity : AppCompatActivity(), MainView {
 
     var presenter: MainPresenter? = null
 
@@ -30,7 +30,7 @@ class MainActivity : BaseActivity<MainPresenter>(), MainView {
     /**
      * return an instance of the presenter implementation class
      */
-    override fun getPresenter(): MainPresenterImp {
+    fun getPresenter(): MainPresenterImp {
         if (presenter == null) {
             presenter = MainPresenterImp(this, this)
         }
